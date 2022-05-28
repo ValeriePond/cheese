@@ -2,7 +2,7 @@ export const Navigation = (props) => {
     return (
         <header>
         <a className="header-link" href=""><img src="./logo.png" className = "logo__pic" alt=""></img></a>
-        <ul class="header-link-all">
+        <ul className="header-link-all">
             <li><a className="header-link" href="">О нас</a></li>
             <li><a className="header-link" href="">Обучение</a></li>
             <li><a className="header-link" href="">Магазин</a></li>
