@@ -67,62 +67,61 @@ function App() {
       <h2>Отзывы</h2>
       <div className='grade'>
         <div className="card__grade">
-          <p>“Such a great product, feel safer walking my dog alone at dusk and for my teenage daughter to use too, everyone likes to have an extra piece of mind, especially in current times,
-thank you 🐾💖”</p>
-          <h2>Kate someone</h2>
+          <p>“Приятный вкус, хороший аромат, легко режется, не липнет к ножику, не рассыпается”</p>
+          <h2>Катя</h2>
         </div>
         <div className="card__grade">
-          <p>“Such a great product, feel safer walking my dog alone at dusk and for my teenage daughter to use too, everyone likes to have an extra piece of mind, especially in current times,
-thank you 🐾💖”</p>
-          <h2>Kate someone</h2>
+          <p>“Мне сыр понравился. Первый раз пробовала Чеддер, раньше думала он острый или чересчур пряный, а он оказался нежным и потрясающе вкусным.”</p>
+          <h2>Сабина</h2>
         </div>
         <div className="card__grade">
-          <p>“Such a great product, feel safer walking my dog alone at dusk and for my teenage daughter to use too, everyone likes to have an extra piece of mind, especially in current times,
-thank you 🐾💖”</p>
-          <h2>Kate someone</h2>
+          <p>"Чувcтвуeтcя пpиятный, нeжный cливoчный вкуc. В мepу coлeный. Пo кoнcиcтeнции тo, чтo нaдo, мягкий и плoтный, нe paзвaливaeтcя. Вкуc кoзьeгo мoлoкo в cocтaвe oщущaeтcя."</p>
+          <h2>Лера</h2>
         </div>
       </div>
     </section>
     <section className="page__faq">
-      <span>FAQ</span>
-      <h1></h1>
+      <p>FAQ</p>
+      <h1>Часто задаваемые вопросы</h1>
+      <details open>
+        <summary>Как сделать заказ?</summary>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis duis ullamcorper id quisque ultrices sed porta proin. Lectus eros lacus nunc nisl nunc nulla condimentum ut libero. Justo vitae enim ut praesent condimentum dignissim porttitor molestie odio. Dolor mauris nisl neque urna id et. Eu integer mi pellentesque porttitor mi magna semper. Vitae fermentum cras ut scelerisque sit praesent id facilisis quisque. A sodales tellus sapien ornare nibh condimentum venenatis, semper bibendum.
+      </div></details>
       <details>
-        <summary>Заголовок спойлера</summary>
-        Текст спойлера
-      </details>
+        <summary>Есть ли у вас доставка?</summary>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis duis ullamcorper id quisque ultrices sed porta proin. Lectus eros lacus nunc nisl nunc nulla condimentum ut libero. Justo vitae enim ut praesent condimentum dignissim porttitor molestie odio. Dolor mauris nisl neque urna id et. Eu integer mi pellentesque porttitor mi magna semper. Vitae fermentum cras ut scelerisque sit praesent id facilisis quisque. A sodales tellus sapien ornare nibh condimentum venenatis, semper bibendum.
+      </div></details>
       <details>
-        <summary>Заголовок спойлера</summary>
-        Текст спойлера
-      </details>
-      <details>
-        <summary>Заголовок спойлера</summary>
-        Текст спойлера
-      </details>
+        <summary>Есть ли у вас самовывоз?</summary>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis duis ullamcorper id quisque ultrices sed porta proin. Lectus eros lacus nunc nisl nunc nulla condimentum ut libero. Justo vitae enim ut praesent condimentum dignissim porttitor molestie odio. Dolor mauris nisl neque urna id et. Eu integer mi pellentesque porttitor mi magna semper. Vitae fermentum cras ut scelerisque sit praesent id facilisis quisque. A sodales tellus sapien ornare nibh condimentum venenatis, semper bibendum.
+      </div></details>
+      <div className='emptyline'></div>
     </section>
     <footer>
-      <div>
+      <div className='top_side'>
         <div>
           <li>
-            <ul></ul>
-            <ul></ul>
-            <ul></ul>
-            <ul></ul>
-            <ul></ul>
+            <ul className='menu'>Меню</ul>
+            <ul>О нас</ul>
+            <ul>Связаться с нами</ul>
+            <ul>Контакты</ul>
+            <ul>FAQ</ul>
           </li>
         </div>
         <div>
-          <h5></h5>
-          <div>
-            <img></img>
-            <img></img>
-            <img></img>
+          <h1 className='menu'> Соц Сети</h1>
+          <div className='image'>
+            <img src='img/Instagram.svg'></img>
+            <img src='img/YouTube.svg'></img>
+            <img src='img/TikTok.svg'></img>
           </div>
         </div>
       </div>
-      <div>
-        <p></p>
-        <p></p>
-        <p></p>
+      <div className='bottom_side'>
+        <p>Copyright C 2022 All Rights Reserved.</p>
+        <div>
+        <p>Privacy Policy</p>
+        <p>Terms of Service</p></div>
       </div>
     </footer>
     </div>
