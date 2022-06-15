@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/cheese/static/css/main.09e07874.css",
+    "main.js": "/cheese/static/js/main.e63b61d3.js",
+    "static/media/bg.jpg": "/cheese/static/media/bg.df7a822b66495b939389.jpg",
+    "index.html": "/cheese/index.html",
+    "main.09e07874.css.map": "/cheese/static/css/main.09e07874.css.map",
+    "main.e63b61d3.js.map": "/cheese/static/js/main.e63b61d3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.09e07874.css",
+    "static/js/main.e63b61d3.js"
+  ]
+}
