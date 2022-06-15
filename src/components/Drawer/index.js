@@ -1,5 +1,38 @@
 import styles from './Drawer.module.scss';
+import axios from 'axios';
+import React from 'react';
+
+import Info from '../Info';
+import AppContext from '../context';
+
+//const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
 export const Drawer = ({ onClose, onRemove, items = []}) =>{
+
+  const { cartItems, setCartItems } = React.useContext(AppContext);
+  const [orderId, setOrderId] = React.useState(null);
+  const [isOrderComplete, setIsOrderComplete] = React.useState(false);
+
+  const totalPrice = cartItems.reduce((sum, obj) => ((obj.price * obj.count) / 100) + sum, 0);
+
+  const onClickOrder = async () => {
+    try {
+      const { data } = await axios.post('https://6298d5d6f2decf5bb74cc366.mockapi.io/orders', {
+        items: cartItems,
+      });
+      setOrderId(data.id);
+      setIsOrderComplete(true);
+      setCartItems([]);
+
+      for (let i = 0; i < cartItems.length; i++) {
+        const item = cartItems[i];
+        await axios.delete('https://6298d5d6f2decf5bb74cc366.mockapi.io/cart/' + item.id);
+        //await delay(1000);
+      }
+    } catch (error) {
+      alert('Ошибка при создании заказа :(');
+    }
+  };
   
 return(
   <div className={styles.overlay}>
@@ -8,11 +41,12 @@ return(
             <h2 className='mt-10 mb-20'>Корзина</h2>
             <img  className="mt-10 mb-20 removeBtn cu-p" onClick={onClose} src='img/delete.svg' alt='img'></img>
             </div>
+            {items.length > 0 ? (<div>
             <div className={styles.items}>
               {items.map((obj) => (
               <div key={obj.id} className={styles.cartItem}>
                 <img className={styles.cartItemImg} width={80} hight={80} src={obj.imageUrl} alt='basketimg'></img>
-                <div  className='mr-20 ml-20'>
+                <div  className='ml-20'>
                   <h5 className='mb-5 mt-5'>{obj.title}</h5>
                   <p className='mt-15 mb-5'>{obj.count} гр</p>
                   <b>{obj.price} KZT</b>
@@ -21,12 +55,22 @@ return(
               </div>
               ))}
             </div>
+            
             <div className={styles.cartTotalBlock}>
               <span>Итого:</span>
               <div></div>
-              <b>4 000 KZT</b>
+              <b>{totalPrice} Тг</b>
             </div>
-            <button>Оформить заказ</button>
+            <button onClick={onClickOrder}>Оформить заказ</button></div>) : 
+            (<Info
+            title={isOrderComplete ? 'Заказ оформлен!' : 'Корзина пустая'}
+            description={
+              isOrderComplete
+                ? `Ваш заказ #${orderId} скоро будет передан курьерской доставке`
+                : 'Ваша корзина грустит, в ней пусто'
+            }
+            image={isOrderComplete ? 'img/order.svg' : 'img/emptyCart.png'}
+          />)}
 </div>
           </div>
 )

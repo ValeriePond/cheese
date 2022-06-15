@@ -12,6 +12,7 @@ import { Home } from "./pages/Home";
 import { Catalog } from "./pages/Catalog";
 import { Route, Switch } from 'react-router-dom';
 import { NotFound } from './pages/NotFound';
+import AppContext from './components/context';
 
 function App() {
   // const [count, setCount] = React.useState(100);
@@ -23,29 +24,65 @@ function App() {
   const [cartOpened, setCartOpened] = React.useState(false);
   const [itemOpened, setItemOpened] = React.useState(false);
 
-  const onAddToCart = (obj) => {
-    axios.post('https://6298d5d6f2decf5bb74cc366.mockapi.io/cart', obj);
-    setCartItems((prev) => [...prev, obj]);
+  
+  const onAddToCart = async(obj) => {
+    try{
+      const findItem = cartItems.find((item) => item.title === obj.title);
+      if(findItem){
+        await axios.delete('https://6298d5d6f2decf5bb74cc366.mockapi.io/cart/${obj.id}');
+        setCartItems((prev) => prev.filter((item) => item.title !== obj.title));
+      } else{
+        await axios.post('https://6298d5d6f2decf5bb74cc366.mockapi.io/cart', obj);
+        setCartItems((prev) => [...prev, obj]);
+      }
+    }catch(error){
+      alert('Товар уже в корзине или произошла какая-то ошибка');
+      console.error(error);
+    }
+    
   };
 
   const onRemoveItem = (id) => {
-    axios.delete(`https://6298d5d6f2decf5bb74cc366.mockapi.io/cart/${id}`);
-    setCartItems((prev) => prev.filter((item) => item.id !== id));
+    try{
+      axios.delete(`https://6298d5d6f2decf5bb74cc366.mockapi.io/cart/${id}`);
+      setCartItems((prev) => prev.filter((item) => item.id !== id));
+    } catch(error){
+      alert('Ошибка при удалении из Корзины');
+      console.error(error);
+    }
+    
   };
 
   // const sortItemsNamePlus=(items)=>{items.sort((a,b)=>a-b)};
 
-
   React.useEffect(() => {
-    axios.get('https://6298d5d6f2decf5bb74cc366.mockapi.io/items').then((res) => {
-      setItems(res.data);
-    });
-    axios.get('https://6298d5d6f2decf5bb74cc366.mockapi.io/cart').then((res) => {
-      setCartItems(res.data);
-    });
-  }, []);
+    async function fetchData() {
+      try{
+        const[cartResponse, itemsResponse] = await Promise.all(
+          [
+            axios.get('https://6298d5d6f2decf5bb74cc366.mockapi.io/cart'),
+            axios.get('https://6298d5d6f2decf5bb74cc366.mockapi.io/items'),
+          ]
+        );
+          setCartItems(cartResponse.data);
+          setItems(itemsResponse.data);
+        }
+        catch(error){
+          alert('Непредвиденная ошибка при обработке данных');
+          console.error(error);
+        }
+      }
+      fetchData();
+    }, []);
 
   return (
+    <AppContext.Provider
+    value={{
+      items,
+      cartItems,
+      setCartOpened,
+      setCartItems,
+    }}>
     <div className="App">
       {cartOpened && <Drawer items={cartItems} onClose={() => setCartOpened(false)} onRemove={onRemoveItem}/>}
       {itemOpened && <Card onClose={() => setItemOpened(false)} />}
@@ -74,6 +111,7 @@ function App() {
       <Faq />
       <Footer /> 
     </div>
+    </AppContext.Provider>
   );
 }
 

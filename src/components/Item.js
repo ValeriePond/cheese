@@ -1,16 +1,16 @@
 import React from 'react';
+import AppContext from './context';
+
 export const Item = ({id, title, imageUrl, price, onCart, onClickItem}) =>{
   
   const [count, setCount] = React.useState(100);
   const plus = () => { setCount(count + 100)};
   const minus = () => { if(count>100){setCount(count - 100)}};
 
-  const [isAdded, setIsAdded] = React.useState(false);
   const [isShowed, setIsShowed] = React.useState(false);
 
   const onClickCart = () => {
-    onCart({ title, imageUrl, price, count});
-    setIsAdded(!isAdded);
+    onCart({id, title, imageUrl, price, count});
   };
 
   // const onShowItem = () => {

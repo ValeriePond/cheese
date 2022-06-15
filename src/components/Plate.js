@@ -1,8 +1,8 @@
-export const Plate = (onCart) =>{
+export const Plate = ({onCart}) =>{
     return(<section>
         <div className='namePlate'>Сырное Ассорти</div>
      <div className='catalogPlate'>
-    <img className='imgCircle' src='img/bg_shops.jpg'></img>
+    <img className='imgCircle' src='img/plate.jpg'></img>
     <div className='leftPlate'>
       <div className='priceCatalog'><h3>9 000 KZT</h3></div>
       <ol type="1">

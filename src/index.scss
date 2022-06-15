@@ -12,6 +12,8 @@ $lightGray: #B9B9B9; /*borders*/
 $lightBtn: #D5B97F; /*buttons*/
 $lightBackground: #F3E7CD; /*otzyvy and faq*/
 $textGray: #515151; /*in faq section text*/
+
+$sizes: ("xs":320px, "sm":576px, "md":768px, "lg":992px, "xl":1200px);
 /*hh__text class - button*/
 
 * {
@@ -42,6 +44,9 @@ header{
     width: 100%;
     z-index: 3;
     
+    .hamburger{
+        display: none;
+    }
     .header-pic{
         padding: 10px;
     }
@@ -109,6 +114,7 @@ header{
     position: relative;
     padding: 170px 0 100px;
     margin: 0;
+    background-repeat: no-repeat;
     p{
         font-size: 40px;
         font-weight: 600;
@@ -151,7 +157,15 @@ header{
         border-right:3px solid $darkColor;
     }
 }
-
+.imageBetween{
+    display:none;
+    margin: auto 10px;
+    img{
+        width: 350px;
+        border-radius: 24px;
+    }
+    
+}
 /*intro*/
 .pageAbout{
     display: flex;
@@ -236,9 +250,16 @@ header{
 /*shop*/
 .pageShop{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     
     .shopLeft{
+        margin: auto 70px;
+        h5{
+            margin-left: 500px;
+        }
+        h2{
+            margin-left: 540px;
+        }
         p{
             width: 700px;
         }
@@ -454,6 +475,8 @@ footer{
 
 .catalogItemMini{
     border-radius: 20px;
+    width: 300px;
+    margin: 20px;
     height: 490px;
     border: 1px solid #D3D3D3;
 
@@ -632,11 +655,6 @@ footer{
     flex-wrap: wrap;
     justify-content: center;
     margin:30px;
-
-      .catalogItemMini{
-          width: 300px;
-          margin: 20px;
-      }
   }
 
   .catalogPlate{
@@ -923,4 +941,204 @@ footer{
         }
     }
 
+}
+
+@media screen and (max-width: 767px) {
+    .imageBetween{
+        display: flex;
+        justify-content: center;
+    }
+    header{        
+        .menu{
+            display: none;
+        }
+        .header-call{
+            display: none;
+        }
+        .hamburger{
+            display: block;
+            margin: 5px;
+        }
+        .header-link-left-basket{
+            margin-right: 20px;
+        }
+    }
+    .pageTop{
+        display: none;
+    }
+    .pageList{
+        display: none;
+    }
+    .pageAbout{
+        img{
+            display: none;
+        }
+        text-align: center;
+        margin: auto 3%;
+    } 
+    
+    .hhText{
+        h5{
+            font-size: 19px;
+        }
+        h2{
+            font-size: 25px;
+        }
+    }
+
+    .pageEdu{
+        text-align: center;
+        padding-top: 0px;
+        margin-right: 0;
+        img{
+            display: none;
+        }
+        div{
+            width: 90%;
+        }
+    }
+    .pageQuote{
+        display: none;
+    }
+    .hhText{
+                h5{
+                    margin-left: 0px;
+                    font-size: 15px;
+                }
+                h2{
+                    margin-left: 0px;
+                    font-size: 24px;
+                }
+                
+                p{
+                    font-size: 13px;
+                }
+            }
+    .pageShop{
+        .catalogItemMini{
+            margin-top: 100px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        .shopLeft{
+            width: 200px;
+            margin-right: 10px;
+            
+        }
+        .catalogItems{
+            margin: 0px;
+        }
+        
+        .hhText{
+            width: 180px;
+            h5{
+                margin-left: 0px;
+            }
+            h2{
+                margin-left: 0px;
+            }
+            p{
+                width: 180px;
+            }
+        }
+        .shopLeft{
+            margin: auto 10px;
+        }
+
+    }
+    .pageFaq{
+        width: 100%;
+        details{
+            div{
+                width: 90%;
+            }
+            width: 90%;
+        }
+        summary{
+            width: 100%;
+            font-size: 18px;
+        }
+    }
+
+    .catalogItemMini{
+        border-radius: 11px;
+        width: 168px;
+        height: 275px;
+        border: 1px solid #D3D3D3;
+    
+        .moreMini{
+            font-size: 6px;
+        }
+        img{
+            width: 125px;
+            height: 125px;
+            border-radius: 16px;
+            margin:11px auto;
+        }
+        h2{
+            margin: 9px auto;
+            font-size: 13px;
+        }
+        .priceCatalogMini{
+            margin: 0;
+            h3{
+                font-size: 17px;
+                margin: 0;
+            }
+            p{
+                padding-left: 8px;
+            }
+        }
+    }
+    .weightMini{
+            margin: 4px auto;
+            
+            button{
+            width: 23px;
+            height: 23px;
+            font-size: 16px;
+        }
+        p{
+            height: 23px;
+            width: 39px;
+            margin: 0;
+            padding: 6px;
+            font-size: 7px;
+        }
+        }
+    .basketMini{
+            font-size: 6px;
+            width: 66px;
+            height: 27px;
+            padding: 7px 10px;
+            margin: 0 auto;
+            
+            .cartImgMini{
+            width: 10px;
+            border-radius: 0px;
+            
+        } 
+        }
+    .pageRate{
+        .grade{
+            .cardGrade{
+            width: 200px;
+            p{
+                padding: 10px;
+                font-size: 14px;
+            }
+            h2{
+                font-size: 28px;
+            }
+            }
+        }
+    }
+    footer{
+        .topSide{
+            div{
+                padding: 10px;
+            }
+        }
+    }
+    
 }

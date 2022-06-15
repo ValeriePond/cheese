@@ -1,5 +1,5 @@
 export const Faq = (props) => {
-    return (<section className="pageFaq">
+    return (<section className="pageFaq" id="Faq">
       <p>FAQ</p>
       <h1>Часто задаваемые вопросы</h1>
       <details open>

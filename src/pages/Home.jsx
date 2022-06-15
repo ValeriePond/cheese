@@ -7,14 +7,14 @@ export const Home = ({items,onAddToCart, setItemOpened}) => {
         <section className="pageTop">
         <h1 className="pageTopHead">СЫРИУС</h1>
         <p >Крафтовая семейная сыроварня</p>
-        <a  href="#">Подробнее</a>
+        <a  href="#About">Подробнее</a>
     </section>
     <section className="pageList">
         <h2>Вкусный</h2>
         <h2 className="list list2"> 100% Натурально</h2>
         <h2>Свежий</h2>
     </section>
-    <section className="pageAbout">
+    <section className="pageAbout" id="About">
       <div className='hhText'>
         <h5>О нас</h5>
         <h2>Вступительное Слово</h2>
@@ -23,7 +23,8 @@ export const Home = ({items,onAddToCart, setItemOpened}) => {
       <img src='img/author.jpg' alt='author'></img>
     </section>
     <section className="pageCarusel"></section>
-    <section className="pageEdu">
+    <section className="imageBetween"><img src="img/line.jpg" alt="" /></section>
+    <section className="pageEdu" id="Education">
         <img src='img/edu1.jpg' alt='edu'></img>
       <div>
       <div className='hhText'>
@@ -39,7 +40,6 @@ export const Home = ({items,onAddToCart, setItemOpened}) => {
     </section>
     <section className="pageShop">
       <div className='shopLeft'>
-        <img src='img/bg_shops.jpg' alt='cheese'></img>
         <div className='hhText'>
         <h5>Продукция</h5>
         <h2>Сыр</h2>
@@ -78,10 +78,6 @@ export const Home = ({items,onAddToCart, setItemOpened}) => {
         <div className="cardGrade">
           <p>“Мне сыр понравился. Первый раз пробовала Чеддер, раньше думала он острый или чересчур пряный, а он оказался нежным и потрясающе вкусным.”</p>
           <h2>Сабина</h2>
-        </div>
-        <div className="cardGrade">
-          <p>"Чувcтвуeтcя пpиятный, нeжный cливoчный вкуc. В мepу coлeный. Пo кoнcиcтeнции тo, чтo нaдo, мягкий и плoтный, нe paзвaливaeтcя. Вкуc кoзьeгo мoлoкo в cocтaвe oщущaeтcя."</p>
-          <h2>Лера</h2>
         </div>
       </div>
     </section>
