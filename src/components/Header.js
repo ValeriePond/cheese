@@ -8,7 +8,7 @@ export const Header = (props) => {
         <ul className="header-link-all">
             <li><Link to="/#About"><p className="header-link" href="#About">О нас</p></Link></li>
             <li><a className="header-link" href="#Education">Обучение</a></li>
-            <li><Link to="catalog"><p className="header-link" href="">Магазин</p></Link></li>
+            <li><Link to="cheese/catalog"><p className="header-link" href="">Магазин</p></Link></li>
             <li><a className="header-link" href="#Faq">FAQ</a></li>
         </ul></div>
         
