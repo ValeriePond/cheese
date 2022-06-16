@@ -88,7 +88,7 @@ function App() {
       {itemOpened && <Card onClose={() => setItemOpened(false)} />}
       <Header onClickCart={() => setCartOpened(true)} />
       <Switch>
-        <Route path="/" exact>
+        <Route path="" exact>
           <Home
                   items={items}
                   onAddToCart={onAddToCart}
@@ -97,7 +97,7 @@ function App() {
         </Route>
         
 
-        <Route path="/catalog" exact>
+        <Route path="catalog" exact>
           <Catalog 
                   items={items}
                   setItemOpened={setItemOpened} 
