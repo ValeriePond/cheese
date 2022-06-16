@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/cheese/static/css/main.09e07874.css",
-    "main.js": "/cheese/static/js/main.62785c7a.js",
+    "main.js": "/cheese/static/js/main.9e9b4b08.js",
     "static/media/bg.jpg": "/cheese/static/media/bg.df7a822b66495b939389.jpg",
     "index.html": "/cheese/index.html",
     "main.09e07874.css.map": "/cheese/static/css/main.09e07874.css.map",
-    "main.62785c7a.js.map": "/cheese/static/js/main.62785c7a.js.map"
+    "main.9e9b4b08.js.map": "/cheese/static/js/main.9e9b4b08.js.map"
   },
   "entrypoints": [
     "static/css/main.09e07874.css",
-    "static/js/main.62785c7a.js"
+    "static/js/main.9e9b4b08.js"
   ]
 }
