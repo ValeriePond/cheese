@@ -97,7 +97,7 @@ function App() {
         </Route>
         
 
-        <Route path="catalog" exact>
+        <Route path="/catalog" exact>
           <Catalog 
                   items={items}
                   setItemOpened={setItemOpened} 
