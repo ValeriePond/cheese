@@ -16,7 +16,7 @@ export const Header = (props) => {
             
             <a onClick={props.onClickCart} className="header-link-left-basket"><img src="img/basket.svg" alt=""></img></a>
             <a className = "header-call" href="tel:+77774000771">СВЯЗАТЬСЯ С НАМИ</a>
-            <a><img src='img/hamburger.svg' alt='hamburger' className='hamburger'></img></a>
+            <a onClick={props.onClickHamburger}><img src='img/hamburger.svg' alt='hamburger' className='hamburger'></img></a>
         </div>
     </header>
     )

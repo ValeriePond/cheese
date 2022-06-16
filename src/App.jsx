@@ -8,6 +8,7 @@ import { Faq } from "./components/Faq";
 import { Footer } from "./components/Footer";
 import { Card } from "./components/Card";
 import { Drawer } from "./components/Drawer";
+import { MobileMenu } from './components/MobileMenu';
 import { Home } from "./pages/Home";
 import { Catalog } from "./pages/Catalog";
 import { Route, Switch } from 'react-router-dom';
@@ -22,6 +23,7 @@ function App() {
   const [items, setItems] = React.useState([]);
   const [cartItems, setCartItems] = React.useState([]);
   const [cartOpened, setCartOpened] = React.useState(false);
+  const [menuOpened, setMenuOpened] = React.useState(false);
   const [itemOpened, setItemOpened] = React.useState(false);
 
   
@@ -81,14 +83,16 @@ function App() {
       items,
       cartItems,
       setCartOpened,
+      setMenuOpened,
       setCartItems,
     }}>
     <div className="App">
       {cartOpened && <Drawer items={cartItems} onClose={() => setCartOpened(false)} onRemove={onRemoveItem}/>}
+      {menuOpened && <MobileMenu onClose={() => setMenuOpened(false)} />}
       {itemOpened && <Card onClose={() => setItemOpened(false)} />}
-      <Header onClickCart={() => setCartOpened(true)} />
+      <Header onClickCart={() => setCartOpened(true)} onClickHamburger={() => setMenuOpened(true)}/>
       <Switch>
-        <Route path="" exact>
+        <Route path="/" exact>
           <Home
                   items={items}
                   onAddToCart={onAddToCart}
@@ -97,7 +101,7 @@ function App() {
         </Route>
         
 
-        <Route path="catalog" exact>
+        <Route path="/catalog" exact>
           <Catalog 
                   items={items}
                   setItemOpened={setItemOpened} 

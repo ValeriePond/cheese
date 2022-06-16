@@ -1,0 +1,51 @@
+$lightColor: #D4B97F; /*backgrounds and on cursors*/
+$darkColor: #815B06; /*headings*/
+$white: #fff;
+$darkGray1: #2E2E2E; /*footer 1*/
+$darkGray2: #242424; /*footer 2*/
+$lightGray: #B9B9B9; /*borders*/
+$lightBtn: #D5B97F; /*buttons*/
+$lightBackground: #F3E7CD; /*otzyvy and faq*/
+$textGray: #515151; /*in faq section text*/
+
+.overlay{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 5;
+}
+
+.drawer{
+    position: fixed;
+    width: 385px;
+    height: 100%;
+    right: 0;
+    background: $lightBackground;
+    box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+
+    .mobileTop{
+        display: flex;
+        justify-content: space-between;
+        .logoPic{
+            width: 137px;
+            height: auto;
+        }
+    }
+    a{
+        text-decoration: none;
+        color: $darkGray1;
+    }
+    li{
+        border-bottom: 2px solid $darkGray2;
+        padding-top:32px;
+        padding-bottom: 24px;
+        font-size: 16px;
+        text-transform: uppercase;
+    }  
+}

@@ -118,12 +118,12 @@ header{
     p{
         font-size: 40px;
         font-weight: 600;
-        line-height: 64px;
+        line-height: 110%;
     }
     a{
         font-size: 16px;
         font-weight: 600;
-        line-height: 26px;
+        line-height: 120%;
         color: $white;
         border: 2px solid $white;
         border-radius: 8px;
@@ -138,7 +138,8 @@ header{
     h1{
         font-size: 64px;
         font-weight: 600;
-        line-height: 102px;
+        padding-top: 40px;
+        line-height: 110%;
     }
 }
 /*line*/
@@ -588,6 +589,7 @@ footer{
         text-align: center;
         position: relative;
         padding-top: 30vh;
+        background-repeat: no-repeat;
     }
 
     .catalogHit{
@@ -964,7 +966,14 @@ footer{
         }
     }
     .pageTop{
-        display: none;
+        height: 60vh;
+        min-height: 200px;
+        padding: 80px 0 20px;
+        background-size: 160%;
+
+        p{
+            font-size: 32px;
+        }
     }
     .pageList{
         display: none;
@@ -1014,6 +1023,9 @@ footer{
                     font-size: 13px;
                 }
             }
+    .catalogItems{
+        margin: 0px;
+    }
     .pageShop{
         .catalogItemMini{
             margin-top: 100px;
@@ -1025,9 +1037,7 @@ footer{
             margin-right: 10px;
             
         }
-        .catalogItems{
-            margin: 0px;
-        }
+        
         
         .hhText{
             width: 180px;
@@ -1062,6 +1072,7 @@ footer{
 
     .catalogItemMini{
         border-radius: 11px;
+        margin: 5px;
         width: 168px;
         height: 275px;
         border: 1px solid #D3D3D3;
@@ -1140,5 +1151,86 @@ footer{
             }
         }
     }
+    //-----------------------------------------
+    .topCatalog{
+        height: 50vh;
+        padding-top: 10vh;
+        font-size: 40px;
+        min-height: 200px;
+        h1{
+            margin: 130px auto;
+        }
+    }
     
-}
+    .namePlate{
+            padding-bottom: 0px;
+            margin-top: 30px;
+            font-size: 38px;
+        }
+    .catalogPlate{
+        flex-direction: column;
+        .leftPlate{
+        width: 100%;
+    }
+        .imgCircle{
+                width: 240px;
+                height: 240px;
+                border-radius: 240px;
+                margin-bottom: 50px;
+            }
+        }
+        .catalogHit{
+            h1{
+                font-size: 38px;
+            }
+        }
+        .catalogSection{
+            h1{
+                font-size: 38px;
+                padding-bottom: 20px;
+            }
+        }
+        .card{
+            flex-direction: column;
+            width: 80%;
+            height: 80%;
+            margin: auto 70px;
+        
+            .removeBtn{
+                margin-left: 100px;
+                margin-top: 20px;
+            }
+            
+            h2{
+                font-size: 32px;
+                line-height: 120%;
+                letter-spacing: -0.01em;
+                margin-bottom: 15px;
+                margin-top: 10px;
+            }
+        
+            .imgLeft{
+                width: 300px;
+                height: 300px;
+                border-radius: 20px;
+                margin: 20px;
+            }
+            
+            .hitPrice{
+                .basket{
+                    height: 40px;
+                    margin: 10px auto;
+                }
+        }
+            details{
+                width: 80%;
+                border-bottom: 3px solid $lightGray;
+                border-top: 3px solid $lightGray;
+                text-align: center;
+        
+                div{
+                    width: 80%;
+                }
+        }
+        }
+    }
