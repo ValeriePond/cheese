@@ -3,9 +3,9 @@ import AppContext from './context';
 
 export const Item = ({id, title, imageUrl, price, onCart, onClickItem}) =>{
   
-  const [count, setCount] = React.useState(100);
-  const plus = () => { setCount(count + 100)};
-  const minus = () => { if(count>100){setCount(count - 100)}};
+  const [count, setCount] = React.useState(200);
+  const plus = () => { setCount(count + 50)};
+  const minus = () => { if(count>100){setCount(count - 50)}};
 
   const [isShowed, setIsShowed] = React.useState(false);
 

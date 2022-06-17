@@ -1,6 +1,7 @@
 
 import { Item } from "../components/Item";
 import React from 'react';
+import { Slider } from '../components/Slider';
 export const Home = ({items,onAddToCart, setItemOpened}) => {
     return(
     <div>
@@ -22,7 +23,9 @@ export const Home = ({items,onAddToCart, setItemOpened}) => {
       </div>
       <img src='img/author.jpg' alt='author'></img>
     </section>
-    <section className="pageCarusel"></section>
+    <section className="pageCarusel">
+      <Slider/>
+    </section>
     <section className="imageBetween"><img src="img/line.jpg" alt="" /></section>
     <section className="pageEdu" id="Education">
         <img src='img/edu1.jpg' alt='edu'></img>
