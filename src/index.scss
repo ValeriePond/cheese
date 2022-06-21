@@ -1,18 +1,4 @@
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-$lightColor: #D4B97F; /*backgrounds and on cursors*/
-$darkColor: #815B06; /*headings*/
-$white: #fff;
-$darkGray1: #2E2E2E; /*footer 1*/
-$darkGray2: #242424; /*footer 2*/
-$lightGray: #B9B9B9; /*borders*/
-$lightBtn: #D5B97F; /*buttons*/
-$lightBackground: #F3E7CD; /*otzyvy and faq*/
-$textGray: #515151; /*in faq section text*/
-
+@import 'colors.scss';
 $sizes: ("xs":320px, "sm":576px, "md":768px, "lg":992px, "xl":1200px);
 /*hh__text class - button*/
 
@@ -29,6 +15,7 @@ body{
 ul{
     list-style: none;
 }
+
 a{
     text-decoration: none;
 }
@@ -50,15 +37,6 @@ header{
     .header-pic{
         padding: 10px;
     }
-        
-    .header-link{
-        color: $darkColor;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 26px;
-        padding: 30px;
-        text-transform: uppercase;
-    }
 
     .header-link:hover{
         color: $lightColor;
@@ -75,6 +53,18 @@ header{
         margin-right: 200px;
         position: relative;
         align-items: center;
+        li{
+            margin-top: 40px;
+            margin-right: 60px;
+            p{
+                color: $darkColor;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 26px;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+        }   
     }
 
     .header-link-left{
@@ -115,10 +105,18 @@ header{
     padding: 170px 0 100px;
     margin: 0;
     background-repeat: no-repeat;
+    h1{
+        font-size: 64px;
+        font-weight: 600;
+        padding-top: 80px;
+        margin-bottom: 60px;
+        line-height: 110%;
+    }
     p{
         font-size: 40px;
         font-weight: 600;
         line-height: 110%;
+        margin-bottom: 80px;
     }
     a{
         font-size: 16px;
@@ -135,12 +133,7 @@ header{
         }   
     }
     
-    h1{
-        font-size: 64px;
-        font-weight: 600;
-        padding-top: 40px;
-        line-height: 110%;
-    }
+    
 }
 /*line*/
 .pageList{
@@ -158,6 +151,7 @@ header{
         border-right:3px solid $darkColor;
     }
 }
+
 .imageBetween{
     display:none;
     margin: auto 10px;
@@ -477,7 +471,7 @@ footer{
 .catalogItemMini{
     border-radius: 20px;
     width: 300px;
-    margin: 20px;
+    margin: 10px;
     height: 490px;
     border: 1px solid #D3D3D3;
 
@@ -490,6 +484,7 @@ footer{
         color: $lightGray;
         font-size: 10px;
         cursor: pointer;
+        padding-top: 8px;
     }
     img{
         width: 224px;
@@ -585,21 +580,28 @@ footer{
         background:  url(img/bg.jpg) center;
         background-size: 100%;
         color: $white;
-        font-size: 64px;
         text-align: center;
         position: relative;
         padding-top: 30vh;
+        font-size: 64px; 
         background-repeat: no-repeat;
     }
 
     .catalogHit{
         h1{
+            padding-top: 100px;
             text-align: center;
             color: $darkGray1;
             font-weight: 700;
             font-size: 48px;
             line-height: 120%;
             text-transform: uppercase;
+        }
+        .imgLeftTop{
+            width: 400px;
+            height: 400px;
+            border-radius: 30px;
+            margin: 50px 90px 50px 0px;
         }
     }
     
@@ -661,13 +663,14 @@ footer{
 
   .catalogPlate{
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       margin:50px;
 
       .imgCircle{
-          width: 540px;
-          height: 540px;
-          border-radius: 540px;
+          width: 500px;
+          height: 500px;
+          border-radius: 500px;
+          margin-right: 100px;
       }
       .leftPlate{
           width: 500px;
@@ -815,18 +818,21 @@ footer{
 
 }
 .cardWrap{
+    margin: auto;
     .removeBtn{
         height: 30px;
         position: absolute;
         margin-right: 0px;
         margin-top: 50px;
+        margin-left: 1150px;
+        z-index: 5;
     }
 }
-.card{
+.cardOpen{
     width: 1200px;
     height: 600px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     background: $white;
     border-radius: 40px;
     margin: auto 70px;
@@ -834,20 +840,20 @@ footer{
     
     h2{
         text-align: start;
-        font-weight: 700;
+        font-weight: 600;
         font-size: 48px;
         line-height: 120%;
         letter-spacing: -0.01em;
         color: $darkGray2;
         margin-bottom: 15px;
-        margin-top: 20px;
+        margin-top: 70px;
     }
 
     .imgLeft{
         width: 500px;
         height: 500px;
         border-radius: 40px;
-        margin: 50px;
+        margin: 50px 90px 50px 0px;
     }
     
     .hitPrice{
@@ -858,13 +864,12 @@ footer{
         }
 }
     details{
-        width: 600px;
-        border-bottom: 3px solid $lightGray;
-        border-top: 3px solid $lightGray;
-        text-align: center;
+        width: 500px;
+        border-bottom: 2px solid $lightGray;
+        padding: 5px;
 
         div{
-            width: 600px;
+            width: 500px;
         }
 }
 }
@@ -956,320 +961,3 @@ footer{
     height: 550px;
 }
 
-@media screen and (max-width: 767px) {
-    .imageBetween{
-        display: flex;
-        justify-content: center;
-    }
-    header{        
-        .menu{
-            display: none;
-        }
-        .header-call{
-            display: none;
-        }
-        .hamburger{
-            display: block;
-            margin: 5px;
-        }
-        .header-link-left-basket{
-            margin-right: 20px;
-        }
-    }
-    .pageTop{
-        height: 60vh;
-        min-height: 200px;
-        padding: 80px 0 20px;
-        background-size: 160%;
-
-        p{
-            font-size: 32px;
-        }
-    }
-    .pageList{
-        display: none;
-    }
-    .pageAbout{
-        img{
-            display: none;
-        }
-        text-align: center;
-        margin: auto 3%;
-    } 
-    
-    .hhText{
-        h5{
-            font-size: 19px;
-        }
-        h2{
-            font-size: 25px;
-        }
-    }
-
-    .pageEdu{
-        text-align: center;
-        padding-top: 0px;
-        margin-right: 0;
-        img{
-            display: none;
-        }
-        div{
-            width: 90%;
-        }
-    }
-    .pageQuote{
-        display: none;
-    }
-    .hhText{
-                h5{
-                    margin-left: 0px;
-                    font-size: 15px;
-                }
-                h2{
-                    margin-left: 0px;
-                    font-size: 24px;
-                }
-                
-                p{
-                    font-size: 13px;
-                }
-            }
-    .catalogItems{
-        margin: 0px;
-    }
-    .pageShop{
-        .catalogItemMini{
-            margin-top: 100px;
-            margin-left: 0px;
-            margin-right: 0px;
-        }
-        .shopLeft{
-            width: 200px;
-            margin-right: 10px;
-            
-        }
-        
-        
-        .hhText{
-            width: 180px;
-            h5{
-                margin-left: 0px;
-            }
-            h2{
-                margin-left: 0px;
-            }
-            p{
-                width: 180px;
-            }
-        }
-        .shopLeft{
-            margin: auto 10px;
-        }
-
-    }
-    .pageFaq{
-        width: 100%;
-        details{
-            div{
-                width: 90%;
-            }
-            width: 90%;
-        }
-        summary{
-            width: 100%;
-            font-size: 18px;
-        }
-    }
-
-    .catalogItemMini{
-        border-radius: 11px;
-        margin: 5px;
-        width: 168px;
-        height: 275px;
-        border: 1px solid #D3D3D3;
-    
-        .moreMini{
-            font-size: 6px;
-        }
-        img{
-            width: 125px;
-            height: 125px;
-            border-radius: 16px;
-            margin:11px auto;
-        }
-        h2{
-            margin: 9px auto;
-            font-size: 13px;
-        }
-        .priceCatalogMini{
-            margin: 0;
-            h3{
-                font-size: 17px;
-                margin: 0;
-            }
-            p{
-                padding-left: 8px;
-            }
-        }
-    }
-    .weightMini{
-            margin: 4px auto;
-            
-            button{
-            width: 23px;
-            height: 23px;
-            font-size: 16px;
-        }
-        p{
-            height: 23px;
-            width: 39px;
-            margin: 0;
-            padding: 6px;
-            font-size: 7px;
-        }
-        }
-    .basketMini{
-            font-size: 6px;
-            width: 66px;
-            height: 27px;
-            padding: 7px 10px;
-            margin: 0 auto;
-            
-            .cartImgMini{
-            width: 10px;
-            border-radius: 0px;
-            
-        } 
-        }
-    .pageRate{
-        .grade{
-            .cardGrade{
-            width: 200px;
-            p{
-                padding: 10px;
-                font-size: 14px;
-            }
-            h2{
-                font-size: 28px;
-            }
-            }
-        }
-    }
-    footer{
-        .topSide{
-            div{
-                padding: 10px;
-            }
-        }
-    }
-    //-----------------------------------------
-    .topCatalog{
-        height: 50vh;
-        padding-top: 10vh;
-        font-size: 40px;
-        min-height: 200px;
-        h1{
-            margin: 130px auto;
-        }
-    }
-    
-    .namePlate{
-            padding-bottom: 0px;
-            margin-top: 30px;
-            font-size: 38px;
-        }
-    .catalogPlate{
-        flex-direction: column;
-        .leftPlate{
-        width: 100%;
-    }
-        .imgCircle{
-                width: 240px;
-                height: 240px;
-                border-radius: 240px;
-                margin-bottom: 50px;
-            }
-        }
-        .catalogHit{
-            h1{
-                font-size: 38px;
-            }
-        }
-        .catalogSection{
-            h1{
-                font-size: 38px;
-                padding-bottom: 20px;
-            }
-        }
-        .card{
-            flex-direction: column;
-            width: 90%;
-            height: 95%;
-            margin:10px;
-        
-            .removeBtn{
-                display: none;
-            }
-            
-            h2{
-                font-size: 32px;
-                line-height: 120%;
-                letter-spacing: -0.01em;
-                margin-bottom: 15px;
-                margin-top: 10px;
-            }
-        
-            .imgLeft{
-                width: 300px;
-                height: 300px;
-                border-radius: 20px;
-                margin: 10px auto;
-            }
-            
-            .hitPrice{
-                flex-direction: column;
-                .basket{
-                    height: 40px;
-                    margin: 10px auto;
-                }
-        }
-            details{
-                width: 80%;
-                border-bottom: 3px solid $lightGray;
-                border-top: 3px solid $lightGray;
-                text-align: center;
-        
-                div{
-                    width: 80%;
-                }
-        }
-        
-        .basket{
-                color: $white;
-                font-size: 16px;
-                width: 130px;
-                height: 70px;
-                padding: 8px 12px;
-                .cartImg{
-                    width: 15px;
-                } 
-            }
-        }
-        .weight{
-            margin: 16px auto;
-            
-            button{
-                width: 35px;
-                height: 35px;
-                font-size: 28px;
-            }
-        
-            p{
-                font-size: 16px;
-                height: 35px;
-                width: 70px;
-                padding: 9px 7px;
-            }
-            
-        }
-    }

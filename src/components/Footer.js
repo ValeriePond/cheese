@@ -3,13 +3,13 @@ export const Footer = (props) =>{
 <footer>
       <div className='topSide'>
         <div>
-          <li>
-            <ul className='menu'>Меню</ul>
-            <ul>О нас</ul>
-            <ul>Связаться с нами</ul>
-            <ul>Контакты</ul>
-            <ul>FAQ</ul>
-          </li>
+          <ul>
+            <li className='menu'>Меню</li>
+            <li>О нас</li>
+            <li>Связаться с нами</li>
+            <li>Контакты</li>
+            <li>FAQ</li>
+          </ul>
         </div>
         <div>
           <h1 className='menu'> Соц Сети</h1>

@@ -1,0 +1,513 @@
+@import 'colors.scss';
+
+@media screen and(max-width: 1025px) {
+    
+}
+
+
+@media screen and (max-width: 769px){
+
+    .cardWrap{
+        .removeBtn{
+            margin-top: 50px;
+            margin-left: 70%;
+        }
+        .cardLeftSide{
+            width: 350px;
+            height: 500px;
+        }
+    }
+    .cardOpen{
+        width: 90%;
+        margin: auto 20px;
+        
+        h2{
+            font-size: 38px;
+            margin-bottom: 15px;
+            margin-top: 70px;
+        }
+    
+        .imgLeft{
+            width: 300px;
+            height: 300px;
+            border-radius: 40px;
+            margin: 20px 30px 20px 10px;
+        }
+        
+        .hitPrice{
+        display: flex;
+            .basket{
+                height: 58px;
+                margin: 16px auto;
+            }
+    }
+        details{
+            width: 300px;
+            border-bottom: 2px solid $lightGray;
+            padding: 5px;
+    
+            div{
+                width: 300px;
+            }
+    }
+    }
+
+    header{       
+        .menu{
+            display: none;
+        }
+        .header-call{
+            display: none;
+        }
+        .hamburger{
+            display: block;
+            margin: 5px;
+        }
+        .header-link-left-basket{
+            margin-right: 20px;
+        }
+    }
+    .pageList{
+        display: none;
+    }
+    .pageCarusel{
+        width: 90%;
+        margin: 30px auto;
+    }
+    .pageAbout{
+        img{
+            margin-top: 50px;
+            height: 410px;
+        }
+        //text-align: center;
+        //margin: auto 3%;
+        .hhText{
+            width: 45%;
+            h2{
+                font-size: 38px;
+            }
+        }
+    } 
+    .pageEdu{
+        padding-top: 0px;
+        img{
+            width: 300px;
+            height: 300px;
+            margin-left: 20px;
+        }
+        div{
+            width: 370px;
+            margin: 0px;
+        }
+
+        .hhText{
+            a{
+                margin: 20px 20px 20px 40%;
+            }
+        }
+    }
+    .pageShop{
+        .catalogItemMini{
+            margin-top: 100px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        .shopLeft{
+            width: 400px;
+            margin-right: 10px;
+        }
+        
+        .hhText{
+            width: 400px;
+            h5{
+                margin-left: 10px;
+            }
+            h2{
+                margin-left: 10px;
+            }
+            p{
+                margin-left: 10px;
+                width: 400px;
+            }
+        }
+        .shopLeft{
+            margin: auto 10px;
+        }
+
+    }
+
+    .catalogHit{
+        .cardOpen{
+            height: auto;
+            width: 100%;
+            margin-left: 0px;
+            details{
+                width: 400px;
+                div{
+                    width: 400px;
+                }
+            }
+        }
+        .imgLeftTop{
+            width: 300px;
+            height: 300px;
+            margin: 30px 70px;
+        }
+    }
+    .pageTop{
+        height: 50vh;
+    }
+    .pageFaq{
+        width: 100%;
+        details{
+            div{
+                width: 90%;
+            }
+            width: 90%;
+        }
+        summary{
+            width: 100%;
+            font-size: 18px;
+        }
+    }
+    .catalogPlate{
+        .leftPlate{
+            ol{
+                font-size: 28px;
+            }
+        }
+        
+        .leftPlate{
+            width: 100%;
+        }
+        .imgCircle{
+                width: 300px;
+                height: 300px;
+                border-radius: 240px;
+                margin-bottom: 50px;
+            }
+        }
+}
+
+@media screen and (max-width: 481px) {
+    
+    
+    .imageBetween{
+        display: flex;
+        justify-content: center;
+    }
+    .pageTop{
+        height: 60vh;
+        min-height: 200px;
+        padding: 80px 0 20px;
+        background-size: 160%;
+
+        h1{
+            margin-bottom: 10px;
+        }
+
+        p{
+            font-size: 32px;
+        }
+    }
+    
+    .pageAbout{
+        .hhText{
+            width: 90%;
+        }
+        img{
+            display: none;
+        }
+        text-align: center;
+        margin: auto 3%;
+    } 
+    
+    .hhText{
+        h5{
+            font-size: 19px;
+        }
+        h2{
+            font-size: 25px;
+        }
+    }
+
+    .pageEdu{
+        text-align: center;
+        padding-top: 0px;
+        margin-right: 0;
+        img{
+            display: none;
+        }
+        div{
+            width: 90%;
+        }
+    }
+    .pageQuote{
+        display: none;
+    }
+    .hhText{
+                h5{
+                    margin-left: 0px;
+                    font-size: 15px;
+                }
+                h2{
+                    margin-left: 0px;
+                    font-size: 24px;
+                }
+                
+                p{
+                    font-size: 13px;
+                }
+            }
+    .catalogItems{
+        margin: 0px;
+    }
+    .pageShop{
+        .catalogItemMini{
+            margin-top: 100px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        .shopLeft{
+            width: 200px;
+            margin-right: 10px;
+            
+        }
+        
+        
+        .hhText{
+            width: 180px;
+            h5{
+                margin-left: 0px;
+            }
+            h2{
+                margin-left: 0px;
+            }
+            p{
+                width: 180px;
+            }
+        }
+        .shopLeft{
+            margin: auto 10px;
+        }
+
+    }
+    
+
+    .catalogItemMini{
+        border-radius: 11px;
+        margin: 5px;
+        width: 168px;
+        height: 275px;
+        border: 1px solid #D3D3D3;
+
+        .moreMini{
+            padding-top: 2px;
+        }
+    
+        .moreMini{
+            font-size: 6px;
+        }
+        img{
+            width: 125px;
+            height: 125px;
+            border-radius: 16px;
+            margin:11px auto;
+        }
+        h2{
+            margin: 9px auto;
+            font-size: 13px;
+        }
+        .priceCatalogMini{
+            margin: 0;
+            h3{
+                font-size: 17px;
+                margin: 0;
+            }
+            p{
+                padding-left: 8px;
+            }
+        }
+    }
+    .weightMini{
+            margin: 4px auto;
+            
+            button{
+            width: 23px;
+            height: 23px;
+            font-size: 16px;
+        }
+        p{
+            height: 23px;
+            width: 39px;
+            margin: 0;
+            padding: 6px;
+            font-size: 7px;
+        }
+        }
+    .basketMini{
+            font-size: 6px;
+            width: 66px;
+            height: 27px;
+            padding: 7px 10px;
+            margin: 0 auto;
+            
+            .cartImgMini{
+            width: 10px;
+            border-radius: 0px;
+            
+        } 
+        }
+    .pageRate{
+        .grade{
+            .cardGrade{
+            width: 200px;
+            p{
+                padding: 10px;
+                font-size: 14px;
+            }
+            h2{
+                font-size: 28px;
+            }
+            }
+        }
+    }
+    footer{
+        .topSide{
+            div{
+                padding: 10px;
+            }
+        }
+    }
+    //-----------------------------------------
+    .catalogHit{
+        .imgLeftTop{
+            margin: 40px;
+        }
+        .cardOpen{
+            details{
+                width: 300px;
+                div{
+                    width: 300px;
+                }
+        }
+        }
+        
+        h1{
+                padding-top: 140px;
+                font-size: 38px;
+            }
+        .cardWrap{
+            .cardLeftSide{
+                padding-top: 0px;
+            }
+            h2{
+                text-align: center;
+            }
+        }
+    }
+    
+    .namePlate{
+            padding-bottom: 0px;
+            margin-top: 30px;
+            font-size: 38px;
+        }
+    .catalogPlate{
+        flex-direction: column;
+        .leftPlate{
+            width: 100%;
+        }
+        .imgCircle{
+                width: 240px;
+                height: 240px;
+                border-radius: 240px;
+                margin-bottom: 50px;
+            }
+        }
+        .catalogSection{
+            h1{
+                font-size: 38px;
+                padding-bottom: 20px;
+            }
+        }
+        .cardWrap{
+             width: 100%;
+            height: 100%;
+            .removeBtn{
+                margin-left: 80%;
+            }
+        }
+        .cardOpen{
+            flex-direction: column;
+            width: 90%;
+            height: 95%;
+            margin: 10px;
+            .cardLeftSide{
+                padding: 20px;
+                h3{
+                    font-size: 30px;
+                }
+            }
+            
+            h2{
+                font-size: 32px;
+                line-height: 120%;
+                letter-spacing: -0.01em;
+                margin-bottom: 15px;
+                margin-top: 10px;
+            }
+        
+            .imgLeft{
+                width: 180px;
+                height: 180px;
+                border-radius: 20px;
+                margin: 10px auto;
+            }
+            
+            .hitPrice{
+                flex-direction: column;
+                .basket{
+                    height: 40px;
+                    margin: 10px auto;
+                }
+        }
+            details{
+                width: 90%;
+                border-bottom: 3px solid $lightGray;
+                border-top: 3px solid $lightGray;
+                text-align: center;
+        
+                div{
+                    width: 90%;
+                }
+        }
+        
+        .basket{
+                color: $white;
+                font-size: 16px;
+                width: 130px;
+                height: 70px;
+                padding: 8px 12px;
+                .cartImg{
+                    width: 15px;
+                } 
+            }
+        }
+        .weight{
+            margin: 16px auto;
+            
+            button{
+                width: 35px;
+                height: 35px;
+                font-size: 28px;
+            }
+        
+            p{
+                font-size: 16px;
+                height: 35px;
+                width: 70px;
+                padding: 9px 7px;
+            }
+            
+        }
+    }

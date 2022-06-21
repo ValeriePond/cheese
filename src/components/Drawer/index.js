@@ -41,7 +41,7 @@ return(
             <h2 className='mt-10 mb-20'>Корзина</h2>
             <img  className="mt-10 mb-20 removeBtn cu-p" onClick={onClose} src='img/delete.svg' alt='img'></img>
             </div>
-            {items.length > 0 ? (<div>
+            {!! items.length ? (<div>
             <div className={styles.items}>
               {items.map((obj) => (
               <div key={obj.id} className={styles.cartItem}>

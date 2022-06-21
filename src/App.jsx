@@ -25,23 +25,31 @@ function App() {
   const [cartOpened, setCartOpened] = React.useState(false);
   const [menuOpened, setMenuOpened] = React.useState(false);
   const [itemOpened, setItemOpened] = React.useState(false);
+  const [showItems, setShowItem] = React.useState([]);
 
+  const onShowItem = async(obj) => {
+    try{
+        setShowItem(() => [obj]);
+    }catch(error){
+      alert('ошибка');
+      console.error(error);
+    }
+  };
   
   const onAddToCart = async(obj) => {
     try{
-      const findItem = cartItems.find((item) => item.title === obj.title);
+      const findItem = cartItems.find((item) => item.id === obj.id);
       if(findItem){
-        await axios.delete('https://6298d5d6f2decf5bb74cc366.mockapi.io/cart/${obj.id}');
-        setCartItems((prev) => prev.filter((item) => item.title !== obj.title));
+        axios.delete(`https://6298d5d6f2decf5bb74cc366.mockapi.io/cart/${obj.id}`);
+        setCartItems((prev) => prev.filter((item) => item.id !== obj.id));
       } else{
-        await axios.post('https://6298d5d6f2decf5bb74cc366.mockapi.io/cart', obj);
+        axios.post(`https://6298d5d6f2decf5bb74cc366.mockapi.io/cart`, obj);
         setCartItems((prev) => [...prev, obj]);
       }
     }catch(error){
       alert('Товар уже в корзине или произошла какая-то ошибка');
       console.error(error);
     }
-    
   };
 
   const onRemoveItem = (id) => {
@@ -55,7 +63,7 @@ function App() {
     
   };
 
-  // const sortItemsNamePlus=(items)=>{items.sort((a,b)=>a-b)};
+  
 
   React.useEffect(() => {
     async function fetchData() {
@@ -84,12 +92,12 @@ function App() {
       cartItems,
       setCartOpened,
       setMenuOpened,
-      setCartItems,
+      setCartItems
     }}>
     <div className="App">
       {cartOpened && <Drawer items={cartItems} onClose={() => setCartOpened(false)} onRemove={onRemoveItem}/>}
       {menuOpened && <MobileMenu onClose={() => setMenuOpened(false)} />}
-      {itemOpened && <Card onClose={() => setItemOpened(false)} />}
+      {itemOpened && <Card onClose={() => setItemOpened(false)} items={showItems}/>}
       <Header onClickCart={() => setCartOpened(true)} onClickHamburger={() => setMenuOpened(true)}/>
       <Switch>
         <Route path="/" exact>
@@ -97,6 +105,7 @@ function App() {
                   items={items}
                   onAddToCart={onAddToCart}
                   setItemOpened={setItemOpened}
+                  onShowItem ={onShowItem}
             />
         </Route>
         
@@ -106,6 +115,7 @@ function App() {
                   items={items}
                   setItemOpened={setItemOpened} 
                   onAddToCart={onAddToCart}
+                  onShowItem ={onShowItem}
           /> 
         </Route>
         <Route path="*">

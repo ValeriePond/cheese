@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 export const Header = (props) => {
     return (
         <header>
-        <Link to=""><p className='header-pic' href=""><img src="./logo.png" className = 'logo__pic' alt=""></img></p></Link>
+        <Link to="/"><p className='header-pic' href=""><img src="logo.png" className = 'logo__pic' alt=""></img></p></Link>
         <div className='menu'>
         <ul className="header-link-all">
-            <li><Link to="/#About"><p className="header-link" href="#About">О нас</p></Link></li>
-            <li><a className="header-link" href="#Education">Обучение</a></li>
-            <li><Link to="catalog"><p className="header-link" href="">Магазин</p></Link></li>
-            <li><a className="header-link" href="#Faq">FAQ</a></li>
+            <li className="header-link"><Link to="/#About"><p href="About">О нас</p></Link></li>
+            <li className="header-link"><p href="#Education">Обучение</p></li>
+            <li className="header-link"><Link to="/catalog"><p href="">Магазин</p></Link></li>
+            <li className="header-link"><p href="#Faq">FAQ</p></li>
         </ul></div>
         
         <div className="header-link-left">

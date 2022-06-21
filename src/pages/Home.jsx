@@ -2,13 +2,13 @@
 import { Item } from "../components/Item";
 import React from 'react';
 import { Slider } from '../components/Slider';
-export const Home = ({items,onAddToCart, setItemOpened}) => {
+export const Home = ({items,onAddToCart, setItemOpened, onShowItem}) => {
     return(
     <div>
         <section className="pageTop">
         <h1 className="pageTopHead">СЫРИУС</h1>
         <p >Крафтовая семейная сыроварня</p>
-        <a  href="#About">Подробнее</a>
+        <a  href="About">Подробнее</a>
     </section>
     <section className="pageList">
         <h2>Вкусный</h2>
@@ -23,9 +23,9 @@ export const Home = ({items,onAddToCart, setItemOpened}) => {
       </div>
       <img src='img/author.jpg' alt='author'></img>
     </section>
-    <section className="pageCarusel">
+     <section className="pageCarusel">
       <Slider/>
-    </section>
+    </section> 
     <section className="imageBetween"><img src="img/line.jpg" alt="" /></section>
     <section className="pageEdu" id="Education">
         <img src='img/edu1.jpg' alt='edu'></img>
@@ -52,7 +52,7 @@ export const Home = ({items,onAddToCart, setItemOpened}) => {
       </div>
       <div className='catalogItems'>{
       items.map((item) => (
-      <Item key={item.index} imageUrl={item.imageUrl} title={item.title} price={item.price} onCart={(obj) => onAddToCart(obj)} id={item.id} onClickItem= {() => setItemOpened(true)}/>
+      <Item key={item.index} imageUrl={item.imageUrl} title={item.title} price={item.price} description={item.description} onCart={(obj) => onAddToCart(obj)} id={item.id} onClickItem= {() => setItemOpened(true)} onShow={(obj) => onShowItem(obj)}/>
       ))[5]}</div>
       {/*<div className="catalogItem">
         <img src='img/bg_shops.jpg' alt='cheese'></img>

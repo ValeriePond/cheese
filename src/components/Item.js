@@ -1,16 +1,18 @@
 import React from 'react';
 import AppContext from './context';
 
-export const Item = ({id, title, imageUrl, price, onCart, onClickItem}) =>{
+export const Item = ({id, title, imageUrl, price, description, onCart, onClickItem, onShow}) =>{
   
   const [count, setCount] = React.useState(200);
   const plus = () => { setCount(count + 50)};
   const minus = () => { if(count>100){setCount(count - 50)}};
 
-  const [isShowed, setIsShowed] = React.useState(false);
-
   const onClickCart = () => {
     onCart({id, title, imageUrl, price, count});
+  };
+  const onClickMore = () => {
+    onShow({id, title, imageUrl, price, count, description});
+    onClickItem();
   };
 
   // const onShowItem = () => {
@@ -32,7 +34,7 @@ export const Item = ({id, title, imageUrl, price, onCart, onClickItem}) =>{
           <button onClick={plus}>+</button>
         </div>
         <div className='basketMini' onClick={onClickCart}><img className='cartImgMini' src='img/shopping-cart.svg' alt="chese"></img><a>В корзину</a></div>
-        <p  className='moreMini' onClick={onClickItem}>Подробнее</p>
+        <p  className='moreMini' onClick={onClickMore}>Подробнее</p>
       </div>
     )
 }
