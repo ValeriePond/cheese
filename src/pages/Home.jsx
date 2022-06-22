@@ -5,7 +5,7 @@ import { Slider } from '../components/Slider';
 export const Home = ({items,onAddToCart, setItemOpened, onShowItem}) => {
     return(
     <div>
-        <section className="pageTop">
+        <section className="homeTop pageTop">
         <h1 className="pageTopHead">СЫРИУС</h1>
         <p >Крафтовая семейная сыроварня</p>
         <a  href="About">Подробнее</a>
@@ -18,8 +18,8 @@ export const Home = ({items,onAddToCart, setItemOpened, onShowItem}) => {
     <section className="pageAbout" id="About">
       <div className='hhText'>
         <h5>О нас</h5>
-        <h2>Вступительное Слово</h2>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <h2>Добро Пожаловать!</h2>
+        <p>Нашей сыроварне уже более пяти лет. Название «Сыриус» происходит от самой яркой звезды Сириус. Секрет наших сыров – уникальность, экологичность и частичка души. Концепция сыроварни – только натуральные ингредиенты, без присадок и консервантов. А ассортимент построен так, чтобы он отличался от магазинной продукции и был разнообразным. Каждый тут найдет что-то для себя.</p>
       </div>
       <img src='img/author.jpg' alt='author'></img>
     </section>
@@ -32,21 +32,21 @@ export const Home = ({items,onAddToCart, setItemOpened, onShowItem}) => {
       <div>
       <div className='hhText'>
         <h5>Обучение</h5>
-        <h2>Обучение</h2>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <h2>Как сделать сыр дома?</h2>
+        <p>С этого вопроса все начинается. На нашем обучении вы узнаете полный процесс изготовления сыра в домашних условиях, а также список всего необходимого оборудования и ингредиентов, которые вам могут понадобиться для домашнего сыроделия. Сделать сыр самому просто, попробуйте!</p>
         <a href="https://www.instagram.com/cheese_almaty/">Подробнее...</a>
         </div>
       </div>
       </section>
     <section className="pageQuote">
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    <i>«Обед, не заканчивающийся вкусным сыром, подобен красивой женщине с одним глазом»</i> <br/> Жан Антельм Брийя-Саварен
     </section>
     <section className="pageShop">
       <div className='shopLeft'>
         <div className='hhText'>
         <h5>Продукция</h5>
-        <h2>Сыр</h2>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <h2>Наш Сыр</h2>
+        <p>Сортов и разновидностей сыра в мире великое множество, каждый обладает своим собственным уникальным вкусом и ароматом. Хотите попробовать каждый из них? В нашей сыроварне представлено более 30 сортов сыра.</p>
         <a href="https://www.instagram.com/cheese_almaty/">К покупкам</a>
         </div>
       </div>

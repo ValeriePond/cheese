@@ -13,7 +13,7 @@ export const Catalog = ({items, onAddToCart, setItemOpened, onShowItem}) => {
 
   return(
     <div>
-    <section className='pageTop'>
+    <section className='pageTop catalogTop'>
       <h1>Каталог товаров</h1>
       <a  href="#menu">К покупкам</a>
     </section>

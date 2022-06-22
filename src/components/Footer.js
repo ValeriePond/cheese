@@ -12,11 +12,9 @@ export const Footer = (props) =>{
           </ul>
         </div>
         <div>
-          <h1 className='menu'> Соц Сети</h1>
+          <h1 className='menu'>Мы в социальных сетях</h1>
           <div className='image'>
-            <img src='img/Instagram.svg'></img>
-            <img src='img/YouTube.svg'></img>
-            <img src='img/TikTok.svg'></img>
+            <a href="https://www.instagram.com/cheese_almaty/"><img src='img/Instagram.svg' alt="inst"></img></a>
           </div>
         </div>
       </div>
