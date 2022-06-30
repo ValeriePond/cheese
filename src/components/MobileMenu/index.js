@@ -17,10 +17,10 @@ return(
             </div>
             <div className='mobMenu'>
             <ul>
-                <li onClick={props.onClose}><Link to="/#About">О нас</Link></li>
-                <li onClick={props.onClose}><a className="header-link" href="#Education">Обучение</a></li>
-                <li onClick={props.onClose}><Link to="catalog">Магазин</Link></li>
-                <li onClick={props.onClose}><a className="header-link" href="#Faq">FAQ</a></li>
+                <Link to="/#About"><li onClick={props.onClose}>О нас</li></Link>
+                <a className="header-link" href="#Education"><li onClick={props.onClose}>Обучение</li></a>
+                <Link to="catalog"><li onClick={props.onClose}>Магазин</li></Link>
+                <a className="header-link" href="#Faq"><li onClick={props.onClose}>FAQ</li></a>
             </ul></div>
         </div>
     </div>

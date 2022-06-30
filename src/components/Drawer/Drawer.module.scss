@@ -1,12 +1,5 @@
-$lightColor: #D4B97F; /*backgrounds and on cursors*/
-$darkColor: #815B06; /*headings*/
-$white: #fff;
-$darkGray1: #2E2E2E; /*footer 1*/
-$darkGray2: #242424; /*footer 2*/
-$lightGray: #B9B9B9; /*borders*/
-$lightBtn: #D5B97F; /*buttons*/
-$lightBackground: #F3E7CD; /*otzyvy and faq*/
-$textGray: #515151; /*in faq section text*/
+@import 'src/colors.scss';
+
 
 .overlay{
     position: fixed;

@@ -1,0 +1,133 @@
+@import '../../colors.scss';
+
+.homeTop{
+    position: relative;
+    background:  url(../../img/bg.jpg) center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+//line under top image
+.pageList{
+    color: $darkColor;
+    background-color: $lightColor;
+    display: flex;
+    justify-content: center;
+    h2{
+        padding: 30px 70px;
+        margin: 40px 0px;
+    }
+
+    .list{
+        border-left: 3px solid $darkColor;
+        border-right:3px solid $darkColor;
+    }
+}
+
+//image for mobile
+.imageBetween{
+    display:none;
+    margin: auto 10px;
+    img{
+        width: 350px;
+        border-radius: 24px;
+    }
+}
+
+/*intro*/
+.pageAbout{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+
+    img{
+        width: auto;
+        height: 610px;
+        border-radius: 40px;
+    }
+    div{
+        width: 530px;
+        margin-top: 50px;
+    }
+}
+
+/*education section*/
+.pageEdu{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+
+    div{
+        width: 640px;
+        margin: 7px;
+    }
+    img{
+        object-fit: cover;
+        border-radius: 20px;
+        width: 570px;
+        height: 570px;
+    }
+}       
+
+.pageQuote{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 160%;
+        color: $textGray;
+        text-align: center;
+        padding:3% 15%;
+}
+
+/*shop*/
+.pageShop{
+    display: flex;
+    justify-content: center;
+    
+    .shopLeft{
+        margin: auto 70px;
+        .hhText{
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            p{
+                text-align: end;
+            }
+        }
+    }
+}
+
+/*отзывы*/
+.pageRate{
+    h2{
+font-weight: 700;
+font-size: 48px;
+line-height: 120%;
+text-align: center;
+letter-spacing: -0.01em;
+text-transform: capitalize;
+    }
+    .grade{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .cardGrade{
+        margin: 16px;
+        width: 390px;
+
+        h2{
+            font-size: 32px;
+            text-align: center;
+        }
+        p{
+            align-items: flex-end;
+            text-align: center;
+            background: $lightBackground;
+            border-radius: 24px;
+            padding: 40px;
+            height: 250px;
+            display: flex;
+            align-items: end;
+        }
+        }
+    }
+}

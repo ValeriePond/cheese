@@ -1,0 +1,108 @@
+@import '../../colors.scss';
+
+.catalogItem{
+    border-radius: 20px;
+    width: 300px;
+    margin: 10px;
+    height: 490px;
+    border: 1px solid #D3D3D3;
+
+    &:hover{
+        box-shadow: 0 0 10px rgba(128, 123, 123, 0.5);
+    }
+
+    .more{
+        text-align: center;
+        color: $lightGray;
+        font-size: 10px;
+        cursor: pointer;
+        padding-top: 8px;
+    }
+    img{
+        width: 224px;
+        height: 224px;
+        border-radius: 28px;
+        display: block;
+        margin:20px auto;
+    }
+    h2{
+        margin: 14px auto;
+        text-align: center;
+        color: $darkGray2;
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 120%;
+    }
+    .priceCatalog{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        h3{
+            text-align: center;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 120%;
+            letter-spacing: -0.01em;
+            color: #F9A000;
+            margin: 0;
+        }
+        p{
+            padding-left: 14px;
+            color: $lightGray;
+            text-align: end;
+        }
+    }
+}
+.weight{
+        display: flex;
+        justify-content: center;
+        margin: 7px auto;
+        
+        button{
+        width: 41px;
+        height: 41px;
+        font-size: 28px;
+        background: $lightGray;
+        color: $white;
+        border: $lightGray;
+        text-align: center;
+        &:hover{
+        background: $lightColor;
+    }
+    }
+    p{
+        background: #F5F5F5;
+        height: 41px;
+        width: 70px;
+        margin: 0;
+        text-align: center;
+        padding: 10px 10px;
+        font-size: 13px;
+    }
+    }
+.basket{
+        color: $white;
+        font-size: 11px;
+        width: 118px;
+        height: 49px;
+        padding: 11px 17px;
+        background: $lightBtn;
+        align-items: center;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        cursor: pointer;
+        &:hover{
+            filter: drop-shadow(3px 3px 10px rgba(128, 123, 123, 0.9));
+        }
+        &:active{
+            background: $darkColor;
+
+        }
+        .cartImg{
+        width: 17px;
+        height: auto;
+        border-radius: 0px;
+        
+    } 
+    }

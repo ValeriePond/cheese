@@ -1,0 +1,33 @@
+@import '../../colors.scss';
+
+.notFound{
+    height: 100vh;
+    background:  $white center;
+    color: $darkColor;
+    text-align: center;
+    position: relative;
+    padding: 170px 0 0px;
+    margin: 0;
+    font-size: 48px;
+
+    img{
+        height: 300px;
+    }
+    h1{
+        font-size: 64px;
+    }
+    a{
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 26px;
+        color: $white;
+        border: 2px solid $darkColor;
+        border-radius: 8px;
+        padding: 16px 32px;
+        text-transform: uppercase;
+        &:hover{
+            color: $lightColor;
+            background-color: $lightBtn;
+        }
+    }
+}
