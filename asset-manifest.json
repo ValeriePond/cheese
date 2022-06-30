@@ -1,15 +1,14 @@
 {
   "files": {
-    "main.css": "/cheese/static/css/main.d6120f92.css",
-    "main.js": "/cheese/static/js/main.f05d7e46.js",
+    "main.css": "/cheese/static/css/main.07053630.css",
+    "main.js": "/cheese/static/js/main.0b36a17e.js",
     "static/media/bg.jpg": "/cheese/static/media/bg.df7a822b66495b939389.jpg",
-    "static/media/bg_shops.jpg": "/cheese/static/media/bg_shops.a6234a67b8ce40029087.jpg",
     "index.html": "/cheese/index.html",
-    "main.d6120f92.css.map": "/cheese/static/css/main.d6120f92.css.map",
-    "main.f05d7e46.js.map": "/cheese/static/js/main.f05d7e46.js.map"
+    "main.07053630.css.map": "/cheese/static/css/main.07053630.css.map",
+    "main.0b36a17e.js.map": "/cheese/static/js/main.0b36a17e.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6120f92.css",
-    "static/js/main.f05d7e46.js"
+    "static/css/main.07053630.css",
+    "static/js/main.0b36a17e.js"
   ]
 }
